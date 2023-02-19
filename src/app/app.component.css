@@ -1,0 +1,26 @@
+.main-content {
+	padding: 2%;
+	padding-bottom: 12vh;
+}
+
+.main-image {
+	display: flex;
+	justify-content: center;
+}
+
+.main-image img {
+	max-height: 30%;
+	max-width: 90%;
+	border-radius: 20px;
+}
+
+#about {
+	padding: 4% 5%;
+}
+
+#about p {
+	text-align: justify;
+	padding-top: 10px;
+	line-height: 1.7rem;
+}
+
