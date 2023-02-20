@@ -23,13 +23,14 @@ header .right-content h2 {
 	margin-left: 20px;
 }
 
-header a, footer a {
+header a, header h2 {
 	text-decoration: none;
 	color: white;
 }
 
-header a:hover, footer a:hover {
+header a:hover, header h2:hover {
 	color: #0D4C92;
+  cursor: pointer;
 }
 
 .logo {

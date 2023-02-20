@@ -18,6 +18,6 @@
       <h2>Initialize Data</h2>
     </a>
     <a th:unless="${role} == 'ROLE_ADMIN'" href="/profile"><h2>Profile</h2></a> -->
-    <a href="/auth/signout"><h2>Logout</h2></a>
+    <h2 (click)="signOut()">Logout</h2>
   <!-- </div> -->
 </header>
