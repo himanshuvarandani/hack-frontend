@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Credentials } from 'types';
+import { Credentials, ResetPassCredentials } from 'types';
 
 const API = 'http://localhost:8080'
 const httpOptions = {
@@ -18,6 +18,14 @@ export class AuthService {
   login(credentials: Credentials): Observable<any> {
     return this.http.post(API+'/auth/signin', {
       username: credentials.username,
+      password: credentials.password,
+    }, httpOptions)
+  }
+
+  resetPassword(credentials: ResetPassCredentials): Observable<any> {
+    return this.http.post(API+'/auth/reset-password', {
+      username: credentials.username,
+      email: credentials.email,
       password: credentials.password,
     }, httpOptions)
   }

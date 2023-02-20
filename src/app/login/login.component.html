@@ -21,7 +21,7 @@
         role="alert"
         *ngIf="f.submitted && username.invalid"
       >
-        <p *ngIf="password.hasError('required')">Username is required!</p>
+        <p *ngIf="username.hasError('required')">Username is required!</p>
       </div>
     </div>
     <div class="form-group">
