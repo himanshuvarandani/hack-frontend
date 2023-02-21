@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { ResetPassCredentials, User } from 'types';
-import { AuthService } from '../_services/auth/auth.service';
-import { TokenStorageService } from '../_services/auth/token-storage.service';
 import { Router } from '@angular/router';
+
+import { AuthService } from '../../_services/auth/auth.service';
+import { TokenStorageService } from '../../_services/auth/token-storage.service';
+import { ResetPassCredentials, User } from 'types';
 
 @Component({
   selector: 'app-reset-password',

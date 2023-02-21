@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../_services/auth/auth.service';
-import { TokenStorageService } from '../_services/auth/token-storage.service';
+
+import { AuthService } from '../../_services/auth/auth.service';
+import { TokenStorageService } from '../../_services/auth/token-storage.service';
 import { Credentials, User } from 'types';
 
 @Component({

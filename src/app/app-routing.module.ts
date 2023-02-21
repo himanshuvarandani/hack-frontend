@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
+
+import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
+import { ResetPasswordComponent } from './pages/reset-password/reset-password.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
