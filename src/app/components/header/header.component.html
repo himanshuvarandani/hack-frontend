@@ -8,16 +8,16 @@
     />
     <h1>HACK</h1>
   </div>
-  <!-- <div ngIf="${jwtToken==null}" class="right-content"> -->
+  <div *ngIf="token==null" class="right-content">
     <a href="/signin"><h2>Login</h2></a>
-  <!-- </div> -->
-  <!-- <div th:unless="${jwtToken==null}" class="right-content">
-    <a th:if="${role} == 'ROLE_HR'" href="/hr"><h2>HR</h2></a>
-    <a th:if="${role} == 'ROLE_EMPLOYEE'" href="/employee"><h2>Employee</h2></a>
-    <a th:if="${role} == 'ROLE_ADMIN'" href="/admin/initialize-data">
+  </div>
+  <div *ngIf="token!=null" class="right-content">
+    <a *ngIf="role=='ROLE_HR'" href="/hr"><h2>HR</h2></a>
+    <a *ngIf="role=='ROLE_EMPLOYEE'" href="/employee"><h2>Employee</h2></a>
+    <a *ngIf="role=='ROLE_ADMIN'" href="/admin/initialize-data">
       <h2>Initialize Data</h2>
     </a>
-    <a th:unless="${role} == 'ROLE_ADMIN'" href="/profile"><h2>Profile</h2></a> -->
+    <a *ngIf="role!='ROLE_ADMIN'" href="/profile"><h2>Profile</h2></a>
     <h2 (click)="signOut()">Logout</h2>
-  <!-- </div> -->
+  </div>
 </header>
