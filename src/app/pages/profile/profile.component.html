@@ -1,0 +1,71 @@
+<div class="profile">
+  <h1>Profile</h1>
+  <div class="edit-profile">
+    <a href="/edit-profile">Edit Profile</a>
+  </div>
+  <div class="profile-head">
+    <div class="image">
+      <img src="/assets/images/HACK_profile.jpg" />
+    </div>
+    <div>
+      <h2>{{profile.name}}</h2>
+      <p>{{profile.user.email}}}</p>
+      <p>Employee Id: {{profile.employeedId}}</p>
+    </div>
+  </div>
+  <div class="profile-details">
+    <div class="row">
+      <h4>Contact</h4>
+      <p>{{profile.contact}}</p>
+    </div>
+    <div class="row">
+      <h4>Emegency Contact</h4>
+      <p>{{profile.emergencyContact}}</p>
+    </div>
+    <div class="row">
+      <h4>Date Of Birth</h4>
+      <p>{{profile.dateOfBirth}}</p>
+    </div>
+    <div class="row">
+      <h4>Blood Group</h4>
+      <p>{{profile.bloodGroup}}</p>
+    </div>
+    <div class="row">
+      <h4>Address</h4>
+      <p>{{profile.address}}</p>
+    </div>
+    <div class="row">
+      <h4>Date Of Joining</h4>
+      <p>{{profile.joiningDate}}</p>
+    </div>
+  </div>
+  <div class="qualifications">
+    <div class="heading-group">
+      <h4>Qualifications</h4>
+      <a href="/edit-profile#new-qualification-form">Add New Qualification</a>
+    </div>
+    <p
+      class="no-qualification"
+      *ngIf="qualifications.length === 0"
+    >No qualifications added</p>
+    <div *ngIf="qualifications.length !== 0">
+      <div
+        *ngFor="let qualification of qualifications;index as i"
+        class="qualification"
+      >
+        <div class="head">
+          <b>{{qualification.degree}}</b>
+          <a
+            href="{{'/edit-profile#Qualification-'+i}}"
+          >
+            <img src="/assets/images/Edit.png" />
+          </a>
+        </div>
+        <p>{{qualification.college}}</p>
+        <p>{{qualification.stream}}</p>
+        <p>{{qualification.session}}</p>
+        <p>{{qualification.marks}}</p>
+      </div>
+    </div>
+  </div>
+</div>

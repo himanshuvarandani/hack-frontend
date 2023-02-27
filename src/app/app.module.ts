@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component'
 import { HeaderComponent } from './components/header/header.component'
 import { HomeComponent } from './pages/home/home.component'
 import { LoginComponent } from './pages/login/login.component'
+import { ProfileComponent } from './pages/profile/profile.component'
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component'
 import { authInterceptorProviders } from './_helper/auth/auth.interceptor'
 
@@ -20,6 +21,7 @@ import { authInterceptorProviders } from './_helper/auth/auth.interceptor'
     LoginComponent,
     HomeComponent,
     ResetPasswordComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
