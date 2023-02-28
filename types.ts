@@ -37,7 +37,8 @@ export type ProfileEditType = {
 
 export type QualificationType = {
   degree: string	
-	college: string	
+	college: string
+  id: number
 	stream: string	
 	session: string	
 	marks: string

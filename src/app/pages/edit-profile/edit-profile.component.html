@@ -1,0 +1,276 @@
+<div class="profile-container">
+  <div class="profile">
+    <h1>Edit Profile</h1>
+    <div class="profile-head">
+      <div class="image">
+        <img src="/assets/images/HACK_profile.jpg" />
+      </div>
+      <div>
+        <h2>{{profile.name}}</h2>
+        <p>{{profile.user.email}}</p>
+        <p>Employee Id: {{profile.employeedId}}</p>
+      </div>
+    </div>
+    <form
+      name="profileForm"
+      class="profile-details"
+      (ngSubmit)="profileForm.form.valid && updateProfile(profileForm.value)"
+      #profileForm="ngForm"
+      novalidate
+    >
+      <div class="row">
+        <h4>Contact</h4>
+        <div class="input-div">
+          <input
+            type="number"
+            name="contact"
+            placeholder="Contact"
+            [ngModel]="profile.contact"
+            required
+            min="1000000000"
+            max="9999999999"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <h4>Emegency Contact</h4>
+        <div class="input-div">
+          <input
+            type="number"
+            name="emergencyContact"
+            placeholder="Emergency Contact"
+            [ngModel]="profile.emergencyContact"
+            required
+            min="1000000000"
+            max="9999999999"
+          />
+        </div>
+      </div>
+      <div class="row">
+        <h4>Date Of Birth</h4>
+        <div class="input-div">
+          <input
+            type="date"
+            name="dateOfBirth"
+            placeholder="Date Of Birth"
+            [ngModel]="profile.dateOfBirth"
+            required
+          />
+        </div>
+      </div>
+      <div class="row">
+        <h4>Blood Group</h4>
+        <div class="input-div">
+          <input
+            type="text"
+            name="bloodGroup"
+            placeholder="Blood Group"
+            [ngModel]="profile.bloodGroup"
+            required
+          />
+        </div>
+      </div>
+      <div class="row">
+        <h4>Address</h4>
+        <div class="input-div">
+          <input
+            type="text"
+            name="address"
+            placeholder="Address"
+            [ngModel]="profile.address"
+            required
+          />
+        </div>
+      </div>
+      <div class="row">
+        <h4>Date Of Joining</h4>
+        <div class="input-div">
+          <input
+            type="date"
+            name="joiningDate"
+            placeholder="Joining Date"
+            [ngModel]="profile.joiningDate"
+            required
+          />
+        </div>
+      </div>
+      <div
+        class="alert alert-danger"
+        role="alert"
+        *ngIf="!profileForm.form.valid && profileForm.touched"
+      >
+        <p>All fields are required</p>
+      </div>
+      <div class="submit-button">
+        <input type="submit" />
+      </div>
+    </form>
+    <div class="qualifications">
+      <h4 class="heading">Qualifications</h4>
+      <div *ngIf="qualifications.length !== 0">
+        <div *ngFor="let qualification of qualifications;index as i">
+          <form
+            name="qualForm"
+            class="qualification-form"
+            id="{{'qualification-'+qualification.id}}"
+            (ngSubmit)="qualForm.form.valid && updateQualification(qualification.id, qualForm.value)"
+            #qualForm="ngForm"
+            novalidate
+          >
+            <h5>Qualification {{i+1}}</h5>
+            <div class="row">
+              <p>Degree Name</p>
+              <div class="input-div">
+                <input
+                  type="text"
+                  name="degree"
+                  placeholder="Degree"
+                  [ngModel]="qualification.degree"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row">
+              <p>College</p>
+              <div class="input-div">
+                <input
+                  type="text"
+                  name="college"
+                  placeholder="College"
+                  [ngModel]="qualification.college"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row">
+              <p>Stream</p>
+              <div class="input-div">
+                <input
+                  type="text"
+                  name="stream"
+                  placeholder="Stream"
+                  [ngModel]="qualification.stream"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row">
+              <p>Session</p>
+              <div class="input-div">
+                <input
+                  type="text"
+                  name="session"
+                  placeholder="Session"
+                  [ngModel]="qualification.session"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row">
+              <p>Marks (write criteria, exa. '7 CGPA' or '7%')</p>
+              <div class="input-div">
+                <input
+                  type="text"
+                  name="marks"
+                  placeholder="Marks (write criteria, exa. '7 CGPA' or '7%')"
+                  [ngModel]="qualification.marks"
+                  required
+                />
+              </div>
+            </div>
+            <div
+              class="alert alert-danger"
+              role="alert"
+              *ngIf="!qualForm.form.valid && qualForm.touched"
+            >
+              <p>All fields are required</p>
+            </div>
+            <div class="submit-button">
+              <input type="submit" />
+            </div>
+          </form>
+        </div>
+      </div>
+      <form
+        name="newQualForm"
+        class="qualification-form"
+        id="new-qualification-form"
+        (ngSubmit)="newQualForm.form.valid && addQualification(newQualForm.value)"
+        #newQualForm="ngForm"
+        novalidate
+      >
+        <h5>Add New Qualification</h5>
+        <div class="row">
+          <p>Degree Name</p>
+          <div class="input-div">
+            <input
+              type="text"
+              name="degree"
+              placeholder="Degree"
+              [ngModel]="newQualification.degree"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <p>College</p>
+          <div class="input-div">
+            <input
+              type="text"
+              name="college"
+              placeholder="College"
+              [ngModel]="newQualification.college"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <p>Stream</p>
+          <div class="input-div">
+            <input
+              type="text"
+              name="stream"
+              placeholder="Stream"
+              [ngModel]="newQualification.stream"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <p>Session</p>
+          <div class="input-div">
+            <input
+              type="text"
+              name="session"
+              placeholder="Session"
+              [ngModel]="newQualification.session"
+              required
+            />
+          </div>
+        </div>
+        <div class="row">
+          <p>Marks (write criteria, exa. '7 CGPA' or '7%')</p>
+          <div class="input-div">
+            <input
+              type="text"
+              name="marks"
+              placeholder="Marks (write criteria, exa. '7 CGPA' or '7%')"
+              [ngModel]="newQualification.marks"
+              required
+            />
+          </div>
+        </div>
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="!newQualForm.form.valid && newQualForm.touched"
+        >
+          <p>All fields are required</p>
+        </div>
+        <div class="submit-button">
+          <input type="submit" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

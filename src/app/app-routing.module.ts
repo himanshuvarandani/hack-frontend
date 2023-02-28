@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 
+import { EditProfileComponent } from './pages/edit-profile/edit-profile.component'
 import { HomeComponent } from './pages/home/home.component'
 import { LoginComponent } from './pages/login/login.component'
 import { ProfileComponent } from './pages/profile/profile.component'
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'signin', component: LoginComponent },
   { path: 'reset-password', component: ResetPasswordComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'profile/edit', component: EditProfileComponent },
 ]
 
 @NgModule({

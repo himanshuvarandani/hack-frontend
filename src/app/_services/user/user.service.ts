@@ -24,11 +24,11 @@ export class UserService {
   }
 
   editProfile(profile: ProfileEditType): Observable<any> {
-    return this.http.post(API+'/edit-profile', profile, httpOptions)
+    return this.http.post(API+'/profile/edit', profile, httpOptions)
   }
 
   addQualification(qualification: QualificationType): Observable<any> {
-    return this.http.post(API+'/add-qualification', qualification, httpOptions)
+    return this.http.post(API+'/qualification/new', qualification, httpOptions)
   }
 
   editQualification(
@@ -36,7 +36,7 @@ export class UserService {
     qualification: QualificationType
   ): Observable<any> {
     return this.http.post(
-      API+`/add-qualification/${qualificationId}`,
+      API+`/qualification/${qualificationId}/edit`,
       qualification,
       httpOptions
     )
