@@ -1,0 +1,66 @@
+.main-image {
+	display: flex;
+	justify-content: center;
+}
+
+.main-image img {
+	max-height: 30%;
+	max-width: 90%;
+	border-radius: 20px;
+}
+
+.details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.project {
+	width: 80%;
+	margin-bottom: 20px;
+}
+
+.project-head {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px;
+}
+
+.heading {
+	text-align: center;
+	margin: 20px;
+}
+
+.project-details {
+	margin-bottom: 20px;
+}
+
+.row {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.row h4 {
+	width: 45%;
+	text-align: end;
+}
+
+.row p {
+	width: 45%;
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.links a {
+	margin-top: 10px;
+}
+

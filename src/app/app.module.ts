@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component'
 import { EditProfileComponent } from './pages/edit-profile/edit-profile.component'
 import { EmployeeComponent } from './pages/employee/index/index.component'
 import { HomeComponent } from './pages/home/home.component'
+import { HRComponent } from './pages/hr/index/index.component'
 import { LoginComponent } from './pages/login/login.component'
 import { ProfileComponent } from './pages/profile/profile.component'
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component'
@@ -28,6 +29,7 @@ import { DailyUpdatesTableComponent } from './components/daily-updates-table/dai
     ProfileComponent,
     EditProfileComponent,
     EmployeeComponent,
+    HRComponent,
     DailyUpdateFormComponent,
     DailyUpdatesTableComponent,
   ],

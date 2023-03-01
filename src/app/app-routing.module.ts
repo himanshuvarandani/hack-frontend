@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router'
 import { EditProfileComponent } from './pages/edit-profile/edit-profile.component'
 import { EmployeeComponent } from './pages/employee/index/index.component'
 import { HomeComponent } from './pages/home/home.component'
+import { HRComponent } from './pages/hr/index/index.component'
 import { LoginComponent } from './pages/login/login.component'
 import { ProfileComponent } from './pages/profile/profile.component'
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component'
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'profile/edit', component: EditProfileComponent },
   { path: 'employee', component: EmployeeComponent },
+  { path: 'hr', component: HRComponent },
 ]
 
 @NgModule({
