@@ -16,7 +16,7 @@
 	margin-top: 30px;
 }
 
-.project, .daily-update {
+.project {
 	width: 80%;
 	margin-bottom: 20px;
 }
@@ -51,58 +51,4 @@
 
 .row p {
 	width: 45%;
-}
-
-.row .input-div {
-	width: 45%;
-}
-
-.row input {
-	width: 50%;
-	padding: 10px;
-	border: 1px solid #7286D3;
-	border-radius: 10px;
-	box-sizing:border-box;
-}
-
-.submit-button {
-	display: flex;
-	justify-content: center;
-}
-
-input[type="submit"] {
-	font-size: 1.1rem;
-	padding: 15px 30px;
-	background-color: #7286D3;
-	border: 0;
-	border-radius: 10px;
-	box-sizing: border-box;
-	cursor: pointer;
-	font-weight: bold;
-}
-
-.links {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.links a {
-	margin-top: 10px;
-}
-
-table th, table td {
-	text-align: center;
-	padding: 10px 30px;
-	margin: 0px;
-	border: 1px solid #7286D3;
-}
-
-.alert {
-  font-size: 0.8rem;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: red;
 }

@@ -13,7 +13,9 @@ import { HomeComponent } from './pages/home/home.component'
 import { LoginComponent } from './pages/login/login.component'
 import { ProfileComponent } from './pages/profile/profile.component'
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component'
-import { authInterceptorProviders } from './_helper/auth/auth.interceptor'
+import { authInterceptorProviders } from './_helper/auth/auth.interceptor';
+import { DailyUpdateFormComponent } from './components/daily-update-form/daily-update-form.component';
+import { DailyUpdatesTableComponent } from './components/daily-updates-table/daily-updates-table.component'
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { authInterceptorProviders } from './_helper/auth/auth.interceptor'
     ProfileComponent,
     EditProfileComponent,
     EmployeeComponent,
+    DailyUpdateFormComponent,
+    DailyUpdatesTableComponent,
   ],
   imports: [
     BrowserModule,

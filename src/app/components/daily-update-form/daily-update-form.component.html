@@ -1,0 +1,46 @@
+<div class="daily-update">
+  <h2 class="heading">
+    {{!dailyUpdate.description ? 'Give' : 'Edit' }} Daily Update
+  </h2>
+  <form
+    name="dailyUpdateForm"
+    (ngSubmit)="dailyUpdateForm.form.valid && postTodaysUpdate(dailyUpdateForm.value)"
+    #dailyUpdateForm="ngForm"
+    novalidate
+  >
+    <div class="row">
+      <h4>Description</h4>
+      <div class="input-div">
+        <input
+          type="text"
+          name="description"
+          placeholder="Description"
+          [ngModel]="dailyUpdate.description"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <h4>Duration (in hours)</h4>
+      <div class="input-div">
+        <input
+          type="number"
+          name="duration"
+          placeholder="Duration (in hours)"
+          [ngModel]="dailyUpdate.duration"
+          required
+        />
+      </div>
+    </div>
+      <div
+        class="alert alert-danger"
+        role="alert"
+        *ngIf="!dailyUpdateForm.form.valid && dailyUpdateForm.touched"
+      >
+        <p>All fields are required</p>
+      </div>
+    <div class="submit-button">
+      <input type="submit" />
+    </div>
+  </form>
+</div>

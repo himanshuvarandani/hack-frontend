@@ -1,0 +1,19 @@
+<div class="daily-updates" *ngIf="dailyUpdates.length !== 0">
+  <h2 class="heading">Daily Updates</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let update of dailyUpdates">
+        <td>{{update.date}}</td>
+        <td>{{update.description}}</td>
+        <td>{{update.duration}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
