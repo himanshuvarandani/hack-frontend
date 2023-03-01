@@ -3,10 +3,10 @@ import { Injectable } from '@angular/core'
 import { Observable } from 'rxjs'
 import { ProfileEditType, QualificationType, User } from 'types'
 
-const API = 'http://localhost:8080'
+const API = 'http://localhost:8080/user'
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
+}
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +21,18 @@ export class UserService {
 
   getUserQualifications(): Observable<any> {
     return this.http.get(API+'/qualifications', httpOptions)
+  }
+
+  getUserProject(): Observable<any> {
+    return this.http.get(API+'/project', httpOptions)
+  }
+
+  getDailyUpdates(): Observable<any> {
+    return this.http.get(API+'/daily-updates', httpOptions)
+  }
+
+  getTodaysDailyUpdate(): Observable<any> {
+    return this.http.get(API+'/daily-updates/today', httpOptions)
   }
 
   editProfile(profile: ProfileEditType): Observable<any> {

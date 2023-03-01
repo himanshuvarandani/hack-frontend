@@ -43,3 +43,18 @@ export type QualificationType = {
 	session: string	
 	marks: string
 }
+
+export type ProjectType = {
+  id: number
+	name: string
+	unit: string
+	location: string
+	customer: string
+}
+
+export type DailyUpdateType = {
+  id: number
+  date: Date
+  description: string
+  duration: number
+}
