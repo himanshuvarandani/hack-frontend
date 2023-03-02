@@ -21,4 +21,15 @@ export class HrService {
   getProjectEmployees(): Observable<any> {
     return this.http.get(API+'/project/employees', httpOptions)
   }
+
+  getEmployeeDetails(empId: number): Observable<any> {
+    return this.http.get(API+`/project/employee/${empId}`, httpOptions)
+  }
+
+  getEmployeeDailyUpdates(empId: number): Observable<any> {
+    return this.http.get(
+      API+`/project/employee/${empId}/daily-updates`,
+      httpOptions
+    )
+  }
 }

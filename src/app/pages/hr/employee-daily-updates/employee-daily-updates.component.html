@@ -1,0 +1,22 @@
+<div class="main-image">
+  <img src="/assets/images/HACK_image1.png" />
+</div>
+<div class="details">
+  <h2 class="heading">{{employee.username}} Employee Updates</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let update of employeeUpdates">
+        <td>{{update.date}}</td>
+        <td>{{update.description}}</td>
+        <td>{{update.duration}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

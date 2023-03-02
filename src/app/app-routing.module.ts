@@ -5,6 +5,7 @@ import { EditProfileComponent } from './pages/edit-profile/edit-profile.componen
 import { EmployeeComponent } from './pages/employee/index/index.component'
 import { HomeComponent } from './pages/home/home.component'
 import { EditProjectComponent } from './pages/hr/edit-project/edit-project.component'
+import { EmployeeDailyUpdatesComponent } from './pages/hr/employee-daily-updates/employee-daily-updates.component'
 import { HRComponent } from './pages/hr/index/index.component'
 import { ProjectEmployeesComponent } from './pages/hr/project-employees/project-employees.component'
 import { LoginComponent } from './pages/login/login.component'
@@ -21,6 +22,10 @@ const routes: Routes = [
   { path: 'hr', component: HRComponent },
   { path: 'hr/project/edit', component: EditProjectComponent },
   { path: 'hr/project/employees', component: ProjectEmployeesComponent },
+  {
+    path: 'hr/project/employee/:employeeId/daily-updates',
+    component: EmployeeDailyUpdatesComponent
+  },
 ]
 
 @NgModule({
