@@ -1,4 +1,4 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { HrService } from 'src/app/_services/hr/hr.service'
 import { UserService } from 'src/app/_services/user/user.service'
 import { ProjectType } from 'types'
@@ -16,7 +16,7 @@ const initialProject: ProjectType = {
   templateUrl: './edit-project.component.html',
   styleUrls: ['./edit-project.component.css']
 })
-export class EditProjectComponent {
+export class EditProjectComponent implements OnInit {
   project: ProjectType = initialProject
 
   constructor(

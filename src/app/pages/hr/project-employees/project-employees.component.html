@@ -1,0 +1,32 @@
+<div class="main-image">
+  <img src="/assets/images/HACK_image1.png" />
+</div>
+<div class="details">
+  <h2 class="heading">Project Employees</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Employee Id</th>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Address</th>
+        <th>Joining Date</th>
+        <th>Daily Updates</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{employee.employeedId}}</td>
+        <td>{{employee.name}}</td>
+        <td>{{employee.contact}}</td>
+        <td>{{employee.address}}</td>
+        <td>{{employee.joiningDate}}</td>
+        <td>
+          <a href="{{'/hr/project/employee/'+employee.user.id}}">
+            View
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

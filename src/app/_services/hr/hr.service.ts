@@ -17,4 +17,8 @@ export class HrService {
   editProject(location: string): Observable<any> {
     return this.http.post(API+'/edit-project', location, httpOptions)
   }
+
+  getProjectEmployees(): Observable<any> {
+    return this.http.get(API+'/project/employees', httpOptions)
+  }
 }

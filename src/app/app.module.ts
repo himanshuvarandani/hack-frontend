@@ -12,6 +12,7 @@ import { EmployeeComponent } from './pages/employee/index/index.component'
 import { HomeComponent } from './pages/home/home.component'
 import { EditProjectComponent } from './pages/hr/edit-project/edit-project.component'
 import { HRComponent } from './pages/hr/index/index.component'
+import { ProjectEmployeesComponent } from './pages/hr/project-employees/project-employees.component'
 import { LoginComponent } from './pages/login/login.component'
 import { ProfileComponent } from './pages/profile/profile.component'
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component'
@@ -34,6 +35,7 @@ import { DailyUpdatesTableComponent } from './components/daily-updates-table/dai
     DailyUpdateFormComponent,
     DailyUpdatesTableComponent,
     EditProjectComponent,
+    ProjectEmployeesComponent,
   ],
   imports: [
     BrowserModule,
