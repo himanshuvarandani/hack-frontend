@@ -1,0 +1,66 @@
+<div class="main-image">
+  <img src="/assets/images/HACK_image1.png" />
+</div>
+<div class="details">
+  <div class="project">
+    <h2 class="heading">Edit Project Details</h2>
+    <form
+      name="projectForm"
+      (ngSubmit)="projectForm.form.valid && updateProject(projectForm.value)"
+      #projectForm="ngForm"
+      novalidate
+    >
+      <div class="row">
+        <h4>Project Name</h4>
+        <div class="input-div">
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            [ngModel]="project.name"
+            disabled
+          />
+        </div>
+      </div>
+      <div class="row">
+        <h4>Project Unit</h4>
+        <div class="input-div">
+          <input
+            type="text"
+            name="unit"
+            placeholder="Project Unit"
+            [ngModel]="project.unit"
+            disabled
+          />
+        </div>
+      </div>
+      <div class="row">
+        <h4>Location</h4>
+        <div class="input-div">
+          <input
+            type="text"
+            name="location"
+            placeholder="Location"
+            [ngModel]="project.location"
+            required
+          />
+        </div>
+      </div>
+      <div class="row">
+        <h4>Customer</h4>
+        <div class="input-div">
+          <input
+            type="text"
+            name="customer"
+            placeholder="Customer"
+            [ngModel]="project.customer"
+            disabled
+          />
+        </div>
+      </div>
+      <div class="submit-button">
+        <input type="submit" />
+      </div>
+    </form>
+  </div>
+</div>

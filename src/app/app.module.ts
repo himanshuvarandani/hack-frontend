@@ -10,12 +10,13 @@ import { HeaderComponent } from './components/header/header.component'
 import { EditProfileComponent } from './pages/edit-profile/edit-profile.component'
 import { EmployeeComponent } from './pages/employee/index/index.component'
 import { HomeComponent } from './pages/home/home.component'
+import { EditProjectComponent } from './pages/hr/edit-project/edit-project.component'
 import { HRComponent } from './pages/hr/index/index.component'
 import { LoginComponent } from './pages/login/login.component'
 import { ProfileComponent } from './pages/profile/profile.component'
 import { ResetPasswordComponent } from './pages/reset-password/reset-password.component'
-import { authInterceptorProviders } from './_helper/auth/auth.interceptor';
-import { DailyUpdateFormComponent } from './components/daily-update-form/daily-update-form.component';
+import { authInterceptorProviders } from './_helper/auth/auth.interceptor'
+import { DailyUpdateFormComponent } from './components/daily-update-form/daily-update-form.component'
 import { DailyUpdatesTableComponent } from './components/daily-updates-table/daily-updates-table.component'
 
 @NgModule({
@@ -32,6 +33,7 @@ import { DailyUpdatesTableComponent } from './components/daily-updates-table/dai
     HRComponent,
     DailyUpdateFormComponent,
     DailyUpdatesTableComponent,
+    EditProjectComponent,
   ],
   imports: [
     BrowserModule,
