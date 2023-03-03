@@ -7,6 +7,7 @@ import { AppComponent } from './app.component'
 import { AppRoutingModule } from './app-routing.module'
 import { FooterComponent } from './components/footer/footer.component'
 import { HeaderComponent } from './components/header/header.component'
+import { InitializeDataComponent } from './pages/admin/initialize-data/initialize-data.component'
 import { EditProfileComponent } from './pages/edit-profile/edit-profile.component'
 import { EmployeeComponent } from './pages/employee/index/index.component'
 import { HomeComponent } from './pages/home/home.component'
@@ -40,6 +41,7 @@ import { DailyUpdatesTableComponent } from './components/daily-updates-table/dai
     ProjectEmployeesComponent,
     EmployeeDailyUpdatesComponent,
     AddProjectEmployeesComponent,
+    InitializeDataComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,23 @@
+<div class="main-image">
+  <img src="/assets/images/HACK_image1.png" />
+</div>
+<div class="form">
+  <h1>Initialize Data</h1>
+  <form
+    name="initialDataForm"
+    (ngSubmit)="initialDataForm.form.valid && initializeData()"
+    #initialDataForm="ngForm"
+    novalidate
+  >
+    <div class="file-input-group">
+      <p>Upload Initial Data Excel File</p>
+      <input
+        type="file"
+        name="file"
+        (change)="handleFIleInput($event)"
+        required
+      />
+    </div>
+    <input type="submit">
+  </form>
+</div>
