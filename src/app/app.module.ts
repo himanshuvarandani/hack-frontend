@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component'
 import { EditProfileComponent } from './pages/edit-profile/edit-profile.component'
 import { EmployeeComponent } from './pages/employee/index/index.component'
 import { HomeComponent } from './pages/home/home.component'
+import { AddProjectEmployeesComponent } from './pages/hr/add-project-employees/add-project-employees.component'
 import { EditProjectComponent } from './pages/hr/edit-project/edit-project.component'
 import { EmployeeDailyUpdatesComponent } from './pages/hr/employee-daily-updates/employee-daily-updates.component'
 import { HRComponent } from './pages/hr/index/index.component'
@@ -38,6 +39,7 @@ import { DailyUpdatesTableComponent } from './components/daily-updates-table/dai
     EditProjectComponent,
     ProjectEmployeesComponent,
     EmployeeDailyUpdatesComponent,
+    AddProjectEmployeesComponent,
   ],
   imports: [
     BrowserModule,

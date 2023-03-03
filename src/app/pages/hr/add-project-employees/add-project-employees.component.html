@@ -1,0 +1,23 @@
+<div class="main-image">
+  <img src="/assets/images/HACK_image1.png" />
+</div>
+<div class="form">
+  <h1>Add New Project Employees</h1>
+  <form
+    name="employeesForm"
+    (ngSubmit)="employeesForm.form.valid && addNewEmployees()"
+    #employeesForm="ngForm"
+    novalidate
+  >
+    <div class="file-input-group">
+      <p>Upload Employees Data Excel File</p>
+      <input
+        type="file"
+        name="newEmployeesFile"
+        (change)="handleFIleInput($event)"
+        required
+      />
+    </div>
+    <input type="submit" />
+  </form>
+</div>

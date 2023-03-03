@@ -32,4 +32,14 @@ export class HrService {
       httpOptions
     )
   }
+
+  addNewEmployees(newEmployees: File): Observable<any> {
+    const formData = new FormData()
+    formData.append('file', newEmployees)
+
+    return this.http.post(
+      API+'/project/add-employees',
+      formData,
+    )
+  }
 }
