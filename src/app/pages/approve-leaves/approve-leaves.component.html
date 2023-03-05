@@ -1,0 +1,28 @@
+<div class="main-image">
+  <img src="/assets/images/HACK_image1.png" />
+</div>
+<div class="details">
+  <h2 class="heading">Leaves To Approve</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Requested By</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Reason</th>
+        <th>Approve</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let leave of leaves">
+        <td>{{leave.user.username}}</td>
+        <td>{{leave.startDate}}</td>
+        <td>{{leave.endDate}}</td>
+        <td>{{leave.reason}}</td>
+        <td>
+          <button (click)="approveLeave(leave.id)">Approve</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

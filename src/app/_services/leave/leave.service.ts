@@ -18,4 +18,12 @@ export class LeaveService {
   applyLeave(leaveData: LeaveType): Observable<any> {
     return this.http.post(API+'/apply', leaveData, httpOptions)
   }
+
+  getLeavesToApprove(): Observable<any> {
+    return this.http.get(API+'/toApprove')
+  }
+  
+  approveLeave(leaveId: number): Observable<any> {
+    return this.http.post(API+`/approve/${leaveId}`, {})
+  }
 }
