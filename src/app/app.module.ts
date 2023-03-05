@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component'
 import { InitializeDataComponent } from './pages/admin/initialize-data/initialize-data.component'
 import { ApplyLeaveComponent } from './pages/apply-leave/apply-leave.component'
 import { ApproveLeavesComponent } from './pages/approve-leaves/approve-leaves.component'
+import { CreateMeetingComponent } from './pages/create-meeting/create-meeting.component'
 import { EditProfileComponent } from './pages/edit-profile/edit-profile.component'
 import { EmployeeComponent } from './pages/employee/index/index.component'
 import { HomeComponent } from './pages/home/home.component'
@@ -46,6 +47,7 @@ import { DailyUpdatesTableComponent } from './components/daily-updates-table/dai
     InitializeDataComponent,
     ApplyLeaveComponent,
     ApproveLeavesComponent,
+    CreateMeetingComponent,
   ],
   imports: [
     BrowserModule,

@@ -68,3 +68,11 @@ export type LeaveType = {
   user: User
   approver: User
 }
+
+export type MeetingType = {
+  id: number
+	startTime: Date
+	endTime: Date
+	title: string
+  participants: Array<User>
+}

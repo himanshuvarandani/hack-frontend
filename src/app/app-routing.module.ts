@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router'
 import { InitializeDataComponent } from './pages/admin/initialize-data/initialize-data.component'
 import { ApplyLeaveComponent } from './pages/apply-leave/apply-leave.component'
 import { ApproveLeavesComponent } from './pages/approve-leaves/approve-leaves.component'
+import { CreateMeetingComponent } from './pages/create-meeting/create-meeting.component'
 import { EditProfileComponent } from './pages/edit-profile/edit-profile.component'
 import { EmployeeComponent } from './pages/employee/index/index.component'
 import { HomeComponent } from './pages/home/home.component'
@@ -37,6 +38,7 @@ const routes: Routes = [
   { path: 'admin/initialize-data', component: InitializeDataComponent },
   { path: 'leave/apply', component: ApplyLeaveComponent },
   { path: 'leaves/approve', component: ApproveLeavesComponent },
+  { path: 'meeting/create', component: CreateMeetingComponent },
 ]
 
 @NgModule({
