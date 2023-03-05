@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 
 import { InitializeDataComponent } from './pages/admin/initialize-data/initialize-data.component'
+import { ApplyLeaveComponent } from './pages/apply-leave/apply-leave.component'
 import { EditProfileComponent } from './pages/edit-profile/edit-profile.component'
 import { EmployeeComponent } from './pages/employee/index/index.component'
 import { HomeComponent } from './pages/home/home.component'
@@ -33,6 +34,7 @@ const routes: Routes = [
     component: AddProjectEmployeesComponent
   },
   { path: 'admin/initialize-data', component: InitializeDataComponent },
+  { path: 'leave/apply', component: ApplyLeaveComponent },
 ]
 
 @NgModule({

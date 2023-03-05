@@ -58,3 +58,13 @@ export type DailyUpdateType = {
   description: string
   duration: number
 }
+
+export type LeaveType = {
+  id: number
+  startDate: Date
+  endDate: Date
+  reason: string
+  approved: boolean
+  user: User
+  approver: User
+}
